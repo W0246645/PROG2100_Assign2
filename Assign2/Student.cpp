@@ -4,10 +4,10 @@
 
 #include "Student.h"
 
-Student::Student(string name, int numCourses, vector<string> courseList) {
+Student::Student(string name) {
     this->name = name,
-    this->numCourses = numCourses,
-    this->courseList = courseList;
+    this->numCourses = 0,
+    this->courseList = new vector<string>();
 }
 
 Student::~Student() = default;
@@ -25,12 +25,13 @@ Student Student::operator=(Student& student) {
     return *this;
 }
 
-string Student::operator<<() {
-    string output = "Student: ";
-    output += this->name;
-    for(int i = 0; i > this->numCourses; i++) {
-        output += "\n- ";
-        output += this->courseList[i];
+ostream& operator<<(ostream& output, Student& student) {
+    output << "Student: ";
+    output << student.name;
+    vector<string>& vecRef = *student.courseList;
+    for(int i = 0; i > student.numCourses; i++) {
+        output << "\n- ";
+        output << vecRef[i];
     }
     return output;
 }
@@ -43,30 +44,14 @@ void Student::SetName(string name) {
     this->name = name;
 }
 
-int Student::GetNumCourses() {
-    return this->numCourses;
-}
-
-void Student::SetNumCourses(int numCourses) {
-    this->numCourses = numCourses;
-}
-
-vector<string> Student::GetCourseList() {
-    return this->courseList;
-}
-
-void Student::SetCourseList(vector<string> courseList) {
-    this->courseList = courseList;
-}
-
 void Student::ResetCourses() {
     this->numCourses = 0;
-    this->courseList.clear();
+    this->courseList->clear();
 }
 
 void Student::AddCourse(string course) {
-    this->courseList.push_back(course);
-    this->numCourses = this->courseList.size();
+    this->courseList->push_back(course);
+    this->numCourses = this->courseList->size();
 }
 
 

@@ -1,6 +1,9 @@
 #include "Student.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    string name = "";
+    std::cout << "Please enter the first student's name." << std::endl;
+    cin >> name;
+    Student student1 = Student(name);
     return 0;
 }

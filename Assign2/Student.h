@@ -12,19 +12,15 @@ class Student {
 private:
     string name;
     int numCourses;
-    vector<string> courseList;
+    vector<string> *courseList;
 public:
-    Student(string name, int numCourses, vector<string> courseList);
+    Student(string name);
     ~Student();
     Student(Student&);
     Student operator=(Student&);
-    string operator<<();
+    friend ostream& operator<<(ostream&, Student&);
     string GetName();
     void SetName(string name);
-    int GetNumCourses();
-    void SetNumCourses(int numCourses);
-    vector<string> GetCourseList();
-    void SetCourseList(vector<string> courseList);
     void ResetCourses();
     void AddCourse(string);
 };
