@@ -36,7 +36,9 @@ int main() {
         std::cout << student1 << "\n" << std::endl;
         std::cout << student2 << std::endl;
 
-        Student student3 = student2;
+        Student student3;
+        student3 = student2;
+        std::cout << student3 << std::endl;
     }
 
     return 0;

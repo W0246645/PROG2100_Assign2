@@ -4,6 +4,8 @@
 
 #include "Student.h"
 
+Student::Student() = default;
+
 Student::Student(string name) {
     this->name = name,
     this->numCourses = 0,
@@ -25,7 +27,7 @@ Student::Student(Student& student) {
     this->courseList = student.courseList;
 }
 
-Student Student::operator=(Student& student) {
+Student& Student::operator=(const Student& student) {
     std::cout << "Assignment operator fired" << std::endl;
     this->name = student.name;
     this->numCourses = student.numCourses;

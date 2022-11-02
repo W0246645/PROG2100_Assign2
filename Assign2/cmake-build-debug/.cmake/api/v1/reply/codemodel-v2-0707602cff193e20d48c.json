@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Documents/NSCCITProjects/PROG2100_Assign2/Assign2/cmake-build-debug",
-		"source" : "D:/Documents/NSCCITProjects/PROG2100_Assign2/Assign2"
+		"build" : "X:/C++ (PROG 2100)/PROG2100_Assign2/Assign2/cmake-build-debug",
+		"source" : "X:/C++ (PROG 2100)/PROG2100_Assign2/Assign2"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 4
 	}
 }

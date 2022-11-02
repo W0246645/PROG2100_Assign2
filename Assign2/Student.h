@@ -14,10 +14,11 @@ private:
     int numCourses;
     vector<string> *courseList;
 public:
+    Student();
     Student(string name);
     ~Student();
     Student(Student&);
-    Student operator=(Student&);
+    Student& operator=(const Student&);
     friend ostream& operator<<(ostream&, Student&);
     string GetName();
     void SetName(string name);

@@ -1,0 +1,17 @@
+# ninja log v5
+1	845	6890993150339470	CMakeFiles/Assign2.dir/main.cpp.obj	8589b6e9bb10dc3d
+6	858	6890993150459497	CMakeFiles/Assign2.dir/Student.cpp.obj	aeaaaa3b7b162769
+858	1063	6890993152469951	Assign2.exe	a63fa69f415ff048
+6	731	6890996100236323	CMakeFiles/Assign2.dir/main.cpp.obj	8589b6e9bb10dc3d
+11	751	6890996100446368	CMakeFiles/Assign2.dir/Student.cpp.obj	aeaaaa3b7b162769
+751	893	6890996101866689	Assign2.exe	a63fa69f415ff048
+2	536	6891001135038440	CMakeFiles/Assign2.dir/main.cpp.obj	8589b6e9bb10dc3d
+6	559	6891001135276167	CMakeFiles/Assign2.dir/Student.cpp.obj	aeaaaa3b7b162769
+559	668	6891001136336405	Assign2.exe	a63fa69f415ff048
+2	548	6891004383538258	CMakeFiles/Assign2.dir/main.cpp.obj	8589b6e9bb10dc3d
+5	578	6891004383838326	CMakeFiles/Assign2.dir/Student.cpp.obj	aeaaaa3b7b162769
+579	677	6891004384803225	Assign2.exe	a63fa69f415ff048
+3	521	6891004752601751	CMakeFiles/Assign2.dir/main.cpp.obj	8589b6e9bb10dc3d
+521	627	6891004753641981	Assign2.exe	a63fa69f415ff048
+2	539	6891006598032539	CMakeFiles/Assign2.dir/Student.cpp.obj	aeaaaa3b7b162769
+539	636	6891006598992754	Assign2.exe	a63fa69f415ff048
