@@ -10,15 +10,23 @@ Student::Student(string name) {
     this->courseList = new vector<string>();
 }
 
-Student::~Student() = default;
+Student::~Student() {
+    std::cout << "Destructor fired" << std::endl;
+    if (this->courseList != nullptr) {
+        this->courseList->clear();
+        this->courseList = nullptr;
+    }
+}
 
 Student::Student(Student& student) {
+    std::cout << "Copy constructor fired" << std::endl;
     this->name = student.name;
     this->numCourses = student.numCourses;
     this->courseList = student.courseList;
 }
 
 Student Student::operator=(Student& student) {
+    std::cout << "Assignment operator fired" << std::endl;
     this->name = student.name;
     this->numCourses = student.numCourses;
     this->courseList = student.courseList;
@@ -26,10 +34,9 @@ Student Student::operator=(Student& student) {
 }
 
 ostream& operator<<(ostream& output, Student& student) {
-    output << "Student: ";
-    output << student.name;
+    output << "Student: " << student.name << "\n" << student.numCourses << " Courses.";
     vector<string>& vecRef = *student.courseList;
-    for(int i = 0; i > student.numCourses; i++) {
+    for(int i = 0; i < student.numCourses; i++) {
         output << "\n- ";
         output << vecRef[i];
     }
