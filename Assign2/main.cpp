@@ -2,16 +2,18 @@
 
 int main() {
     while (true) {
-        string name = "";
+        string name;
         std::cout << "Please enter the first student's name or \"quit\" to quit." << std::endl;
         cin >> name;
         if (name == "quit") {
             break;
         }
-        Student student1 = Student(name);
+        Student student1;
+        student1.SetName(name);
+
         bool stop = false;
         while (!stop) {
-            string course = "";
+            string course;
             std::cout << "Please enter one of " << student1.GetName() << "'s courses or enter \"Q\" if you are done."
                       << std::endl;
             cin >> course;
@@ -36,7 +38,15 @@ int main() {
         std::cout << student1 << "\n" << std::endl;
         std::cout << student2 << std::endl;
 
+        name = "";
+        std::cout << "Please enter the third student's name or \"quit\" to quit." << std::endl;
+        cin >> name;
+        if (name == "quit") {
+            break;
+        }
+
         Student student3;
+        student3.SetName(name);
         student3 = student2;
         std::cout << student3 << std::endl;
     }

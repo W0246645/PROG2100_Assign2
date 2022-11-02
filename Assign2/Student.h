@@ -15,7 +15,6 @@ private:
     vector<string> *courseList;
 public:
     Student();
-    Student(string name);
     ~Student();
     Student(Student&);
     Student& operator=(const Student&);
