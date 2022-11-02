@@ -14,10 +14,7 @@ Student::Student(string name) {
 
 Student::~Student() {
     std::cout << "Destructor fired" << std::endl;
-    if (this->courseList != nullptr) {
-        this->courseList->clear();
-        this->courseList = nullptr;
-    }
+    delete this->courseList;
 }
 
 Student::Student(Student& student) {
